@@ -30,3 +30,6 @@ docker-login:
 	sudo podman login ${REG} -u ${REG_USER} -p ${REG_PASSWORD}
 
 redeploy: docker-build docker-login docker-push
+
+clean: ## Remove binary and coverage files
+	rm -rf bin coverage.out coverage.html

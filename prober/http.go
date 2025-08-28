@@ -192,7 +192,7 @@ func (h *HTTP) sendRequest(ctx context.Context) HTTPResult {
 			DNSError:      dnsError,
 		}
 	}
-	defer res.Body.Close()
+	_ = res.Body.Close()
 	return HTTPResult{
 		StatusCode:    res.StatusCode,
 		ResponseTime:  responseTime,

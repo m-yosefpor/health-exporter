@@ -184,7 +184,7 @@ func (d *DNS) parseRecordType() (uint16, error) {
 	case "TXT":
 		recordType = dns.TypeTXT
 	default:
-		err = fmt.Errorf("Record type %s not recognized", d.RecordType)
+		err = fmt.Errorf("record type %s not recognized", d.RecordType)
 	}
 
 	return recordType, err

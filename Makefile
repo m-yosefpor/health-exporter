@@ -15,7 +15,7 @@ test: fmt vet tidy # envtest ## Run tests.
 ##@ Build
 
 build: test ## Build manager binary.
-	go build -race -o bin/main main.go
+	go build -race -o bin/main .
 
 run: manifests generate fmt vet ## Run a controller from your host.
 	go run ./main.go
